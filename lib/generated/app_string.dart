@@ -31,5 +31,7 @@ class AppStrings {
   static const String dontGetCode = 'dontGetCode';
   static const String resend = 'resend';
   static const String continue1 = 'continue1';
+  static const String home = 'home';
+  static const String profile = 'profile';
 
 }

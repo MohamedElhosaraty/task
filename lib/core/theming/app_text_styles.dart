@@ -74,6 +74,11 @@ class AppTextStyles {
     fontWeight: AppFontWeights.fontWeightMedium,
     fontSize: AppTextSizes.fontSize13,
   );
+  static TextStyle font12Medium(BuildContext context) => baseStyle(
+    fontWeight: AppFontWeights.fontWeightMedium,
+    fontSize: AppTextSizes.fontSize12,
+  );
+
 
 
 

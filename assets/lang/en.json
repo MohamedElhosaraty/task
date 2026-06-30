@@ -32,5 +32,7 @@
   "verifyMessage": "To complete the opening of your account, enter the verification code sent via email",
   "dontGetCode": "Didn't get the code?  ",
   "resend": "resend",
-  "continue1": "continue"
+  "continue1": "continue",
+  "home": "home",
+  "profile": "profile"
 }

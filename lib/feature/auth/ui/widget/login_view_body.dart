@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:task/core/helpers/extensions.dart';
 import 'package:task/core/helpers/toast_helper.dart';
 import 'package:task/core/localization/localization_methods.dart';
 import 'package:task/core/theming/app_text_styles.dart';
@@ -9,6 +10,7 @@ import 'package:task/feature/auth/ui/cubit/auth_cubit.dart';
 import 'package:task/feature/auth/ui/widget/custom_remember.dart';
 import 'package:task/feature/auth/ui/widget/dont_have_an_account.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/widgets/custom_change_language.dart';
 import '../../../../core/widgets/rounded_text_field.dart';
@@ -120,6 +122,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 listener: (context, state) {
                   if (state is LoginSuccess) {
                     ToastHelper().showSuccessToast(context, state.loginModel.message);
+                    context.pushReplacementNamed(Routes.mainScreen);
                   }
                   if (state is LoginError) {
                     ToastHelper().showErrorToast(context, state.message);

@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:task/core/helpers/extensions.dart';
+import 'package:task/core/routing/routes.dart';
 import 'package:task/core/theming/app_text_styles.dart';
 import 'package:task/feature/auth/ui/cubit/auth_cubit.dart';
 
@@ -166,7 +168,7 @@ class _OtpViewBodyState extends State<OtpViewBody> {
                   ToastHelper().showSuccessToast(
                     context, "Verified Successfully"
                   );
-                  // context.pushReplacementNamed(Routes.otpView);
+                   context.pushReplacementNamed(Routes.mainScreen);
                 }
                 if (state is VerifyError) {
                   ToastHelper().showErrorToast(

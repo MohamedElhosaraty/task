@@ -5,5 +5,7 @@ class Assets {
   static const String imageLogo = 'assets/image/logo.png';
   static const String langAr = 'assets/lang/ar.json';
   static const String langEn = 'assets/lang/en.json';
+  static const String svgHome = 'assets/svg/home.svg';
+  static const String svgProfile = 'assets/svg/profile.svg';
 
 }
