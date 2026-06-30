@@ -126,7 +126,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   }
                 },
                 builder: (context, state) {
-                  if (state is LoginLoading){
+                  if (state is LoginLoading) {
                     return const Center(child: CircularProgressIndicator());
                   }
                   return CustomGradientButton(
