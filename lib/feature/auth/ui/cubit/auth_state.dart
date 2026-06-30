@@ -17,3 +17,19 @@ class LoginError extends AuthState {
 
   LoginError({required this.message});
 }
+
+// ------------ Register ------------ //
+
+class RegisterLoading extends AuthState {}
+
+class RegisterSuccess extends AuthState {
+  final RegisterModel signUpModel;
+
+  RegisterSuccess({required this.signUpModel});
+}
+
+class RegisterError extends AuthState {
+  final String message;
+
+  RegisterError({required this.message});
+}

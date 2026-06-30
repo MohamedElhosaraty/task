@@ -10,7 +10,7 @@ class ApiManager {
 
   Future<Response> post({
     required String endPoint,
-    required Map<String, dynamic> data,
+    required dynamic data,
   }) async {
     final response = await dio.post(
       ApiConstants.baseUrl + endPoint,

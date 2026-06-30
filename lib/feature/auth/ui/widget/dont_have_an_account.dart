@@ -1,7 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:task/core/helpers/extensions.dart';
 
 import '../../../../core/localization/localization_methods.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_text_styles.dart';
 import '../../../../generated/app_string.dart';
@@ -26,7 +28,7 @@ class DontHaveAnAccount extends StatelessWidget {
               ),
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
-                  // TODO: navigate to sign up
+                  context.pushReplacementNamed(Routes.registerView);
                 },
             ),
           ],

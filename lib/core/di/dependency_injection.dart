@@ -1,7 +1,7 @@
 import 'package:get_it/get_it.dart';
 
 import '../../feature/auth/data/repo/auth_repo_impl.dart';
-import '../../feature/auth/data/service/login_service.dart';
+import '../../feature/auth/data/service/auth_service.dart';
 import '../../feature/auth/domain/repo/auth_repo.dart';
 import '../../feature/auth/ui/cubit/auth_cubit.dart';
 import '../api/api_manager.dart';
@@ -16,14 +16,14 @@ Future<void> setupGetIt() async {
   );
 
   // 📦 Data Sources
-  getIt.registerLazySingleton<LoginService>(
-    () => LoginService(getIt<ApiManager>()),
+  getIt.registerLazySingleton<AuthService>(
+    () => AuthService(getIt<ApiManager>()),
   );
 
   // 📚 Repositories
 
   getIt.registerLazySingleton<AuthRepo>(
-    () => AuthRepoImpl(getIt<LoginService>()),
+    () => AuthRepoImpl(getIt<AuthService>()),
   );
 
   // 🧠 Cubits

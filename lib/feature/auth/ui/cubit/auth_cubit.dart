@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/helpers/shared_pref_helper.dart';
 import '../../data/model/login_model.dart';
+import '../../data/model/register_model.dart';
 import '../../domain/repo/auth_repo.dart';
 
 part 'auth_state.dart';
@@ -23,6 +26,29 @@ class AuthCubit extends Cubit<AuthState> {
         await SharedPrefHelper.setSecuredString('token', loginModel.data.token);
         emit(LoginSuccess(loginModel: loginModel));
       },
+    );
+  }
+
+  Future<void> register({
+    required String email,
+    required String username,
+    required String password,
+    required String passwordConfirmation,
+    File? image,
+  }) async {
+    emit(RegisterLoading());
+
+    final result = await authRepo.register(
+      email: email,
+      username: username,
+      password: password,
+      passwordConfirmation: passwordConfirmation,
+      image: image,
+    );
+
+    result.fold(
+          (failure) => emit(RegisterError(message: failure.error)),
+          (signUpModel) => emit(RegisterSuccess(signUpModel: signUpModel)),
     );
   }
 }

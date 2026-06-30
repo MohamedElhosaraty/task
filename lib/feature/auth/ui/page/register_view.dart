@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:task/feature/auth/ui/widget/login_view_body.dart';
+import 'package:task/feature/auth/ui/cubit/auth_cubit.dart';
+import 'package:task/feature/auth/ui/widget/register_view_body.dart';
 
 import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/theming/app_colors.dart';
-import '../cubit/auth_cubit.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class RegisterView extends StatelessWidget {
+  const RegisterView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +15,8 @@ class LoginView extends StatelessWidget {
       backgroundColor: AppColors.background,
       body: BlocProvider(
         create: (context) => getIt<AuthCubit>(),
-        child: LoginViewBody(),
+        child: RegisterViewBody(),
       ),
     );
   }
 }
-

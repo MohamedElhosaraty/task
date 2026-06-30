@@ -14,6 +14,17 @@ class AppStrings {
   static const String remember = 'remember';
   static const String dontHaveAccount = 'dontHaveAccount';
   static const String createAccount = 'createAccount';
-
+  static const String createNewAccount = 'createNewAccount';
+  static const String profilePicture = 'profilePicture';
+  static const String allowedFiles = 'allowedFiles';
+  static const String maxSize = 'maxSize';
+  static const String username = 'username';
+  static const String usernameRequired = 'usernameRequired';
+  static const String usernameTooShort = 'usernameTooShort';
+  static const String confirmPassword = 'confirmPassword';
+  static const String confirmPasswordRequired = 'confirmPasswordRequired';
+  static const String passwordsDoNotMatch = 'passwordsDoNotMatch';
+  static const String haveAccount = 'haveAccount';
+  static const String noAccount = 'noAccount';
 
 }

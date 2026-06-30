@@ -13,5 +13,18 @@
   "forgotPassword": "Forgot password?",
   "remember": "remember",
   "dontHaveAccount": "Don't have an account? ",
-  "createAccount": "Create account"
+  "createAccount": "Create account",
+
+  "createNewAccount": "Create New Account",
+  "profilePicture": "Profile Picture",
+  "allowedFiles": "Allowed files: JPEG, PNG",
+  "maxSize": "Max size: 5MB",
+  "username": "Username",
+  "usernameRequired": "Please enter your username",
+  "usernameTooShort": "Username must be at least 3 characters",
+  "confirmPassword": "Confirm Password",
+  "confirmPasswordRequired": "Please confirm your password",
+  "passwordsDoNotMatch": "Passwords do not match",
+  "haveAccount": "Already have an account?",
+  "noAccount": "Don't have an account?"
 }

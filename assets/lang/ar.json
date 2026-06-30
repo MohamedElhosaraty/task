@@ -13,5 +13,18 @@
   "forgotPassword": "هل نسيت كلمة المرور؟",
   "remember": "تذكرني",
   "dontHaveAccount": "ليس لديك حساب؟ ",
-  "createAccount": "إنشاء حساب جديد"
+  "createAccount": "إنشاء حساب جديد",
+
+  "createNewAccount": "إنشاء حساب جديد",
+  "profilePicture": "الصورة الشخصية",
+  "allowedFiles": "الملفات المسموح بها: JPEG, PNG",
+  "maxSize": "الحد الأقصى: 5MB",
+  "username": "اسم المستخدم",
+  "usernameRequired": "يرجى إدخال اسم المستخدم",
+  "usernameTooShort": "اسم المستخدم يجب ألا يقل عن 3 أحرف",
+  "confirmPassword": "تأكيد كلمة المرور",
+  "confirmPasswordRequired": "يرجى تأكيد كلمة المرور",
+  "passwordsDoNotMatch": "كلمتا المرور غير متطابقتين",
+  "haveAccount": "لديك حساب؟",
+  "noAccount": "ليس لديك حساب؟"
 }
