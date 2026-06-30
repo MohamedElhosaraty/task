@@ -1,0 +1,17 @@
+{
+  "language": "Language",
+  "en": "English",
+  "ar": "Arabic",
+  "app": "App",
+  "login": "Login",
+  "email": "Email",
+  "enterEmail": "Please enter email",
+  "enterEmailCorrect": "Please enter email correct",
+  "password": "Password",
+  "enterPassword": "please enter password",
+  "passwordLength": "The password must be at least 6 characters long",
+  "forgotPassword": "Forgot password?",
+  "remember": "remember",
+  "dontHaveAccount": "Don't have an account? ",
+  "createAccount": "Create account"
+}
