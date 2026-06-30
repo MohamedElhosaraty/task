@@ -24,6 +24,7 @@ class AppColors {
   static const Color sheetBackground = Color(0xFF1B2625);
   static const Color black = Color(0xFF0D1D1E);
   static const Color primaryDark = Color(0xFF42867B);
+  static const Color secondary = Color(0xFF998C8C);
 
 
 

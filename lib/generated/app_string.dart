@@ -26,5 +26,10 @@ class AppStrings {
   static const String passwordsDoNotMatch = 'passwordsDoNotMatch';
   static const String haveAccount = 'haveAccount';
   static const String noAccount = 'noAccount';
+  static const String verify = 'verify';
+  static const String verifyMessage = 'verifyMessage';
+  static const String dontGetCode = 'dontGetCode';
+  static const String resend = 'resend';
+  static const String continue1 = 'continue1';
 
 }

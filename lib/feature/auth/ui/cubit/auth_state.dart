@@ -23,9 +23,9 @@ class LoginError extends AuthState {
 class RegisterLoading extends AuthState {}
 
 class RegisterSuccess extends AuthState {
-  final RegisterModel signUpModel;
+  final RegisterModel registerModel;
 
-  RegisterSuccess({required this.signUpModel});
+  RegisterSuccess({required this.registerModel});
 }
 
 class RegisterError extends AuthState {
@@ -33,3 +33,9 @@ class RegisterError extends AuthState {
 
   RegisterError({required this.message});
 }
+
+class VerifyLoading extends AuthState {}
+
+class VerifySuccess extends AuthState {}
+
+class VerifyError extends AuthState {}

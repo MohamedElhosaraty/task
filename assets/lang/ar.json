@@ -26,5 +26,11 @@
   "confirmPasswordRequired": "يرجى تأكيد كلمة المرور",
   "passwordsDoNotMatch": "كلمتا المرور غير متطابقتين",
   "haveAccount": "لديك حساب؟",
-  "noAccount": "ليس لديك حساب؟"
+  "noAccount": "ليس لديك حساب؟",
+
+  "verify": "رمز التحقق ",
+  "verifyMessage": " لاستكمال فتح حسابك ادخل رمز التحقق المرسل عبر البريد الإلكتروني",
+  "dontGetCode": "لم يصلك رمز التحقق؟",
+  "resend": "إعادة إرسال",
+  "continue1": "المتابعة"
 }

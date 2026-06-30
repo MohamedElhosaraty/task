@@ -70,4 +70,22 @@ class AuthService {
       }
     }
   }
+
+  Future<Either<Failures, void>> verify({
+    required String email,
+    required String code,
+  }) async {
+    try {
+      final response = await apiManager.get(
+        endPoint: ApiConstants.verify(email: email, code: code),
+      );
+      return const Right(null);
+    } catch (e) {
+      if (e is DioException) {
+        return Left(ServerFailure.fromDioException(e));
+      } else {
+        return Left(ServerFailure(error: e.toString()));
+      }
+    }
+  }
 }

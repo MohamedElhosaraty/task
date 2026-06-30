@@ -16,4 +16,9 @@ abstract class AuthRepo {
   required String passwordConfirmation,
     File? image,
   });
+
+  Future<Either<Failures, void>> verify({
+    required String email,
+    required String code,
+  });
   }

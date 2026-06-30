@@ -21,6 +21,7 @@ class AuthRepoImpl implements AuthRepo {
     return await authService.login(email, password);
   }
 
+  @override
   Future<Either<Failures, RegisterModel>> register({
     required String email,
     required String username,
@@ -35,5 +36,13 @@ class AuthRepoImpl implements AuthRepo {
       passwordConfirmation: passwordConfirmation,
       image: image,
     );
+  }
+
+  @override
+  Future<Either<Failures, void>> verify({
+    required String email,
+    required String code,
+  }) async {
+    return await authService.verify(email: email, code: code);
   }
 }

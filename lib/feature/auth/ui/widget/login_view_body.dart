@@ -119,7 +119,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               BlocConsumer<AuthCubit, AuthState>(
                 listener: (context, state) {
                   if (state is LoginSuccess) {
-                    ToastHelper().showSuccessToast(context, "Login Success");
+                    ToastHelper().showSuccessToast(context, state.loginModel.message);
                   }
                   if (state is LoginError) {
                     ToastHelper().showErrorToast(context, state.message);
