@@ -18,7 +18,10 @@ class DioFactory {
       ..connectTimeout = timeOut
       ..receiveTimeout = timeOut;
 
-    await _addDioHeaders();
+    dio!.options.headers = {
+      'Accept': 'application/json',
+    };
+
     _addDioInterceptor();
   }
 
@@ -29,24 +32,26 @@ class DioFactory {
     return dio!;
   }
 
-  static Future<void> _addDioHeaders() async {
-    final token = await SharedPrefHelper.getSecuredString(SharedPrefsKeys.tokenKey);
-    dio?.options.headers = {
-      'Accept': 'application/json',
-      'Authorization': 'Bearer $token',
-    };
-    debugPrint("Headers have been set into Dio with token: $token");
-  }
-
-  static void setTokenIntoHeaderAfterLogin(String token) {
-    dio?.options.headers = {
-      'Accept': 'application/json',
-      'Authorization': 'Bearer $token',
-    };
-    debugPrint("Token has been set into header");
-  }
-
   static void _addDioInterceptor() {
+    dio?.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) async {
+          final token = await SharedPrefHelper.getSecuredString(SharedPrefsKeys.tokenKey);
+
+          if (token.isNotEmpty) {
+            options.headers['Authorization'] = 'Bearer $token';
+          }
+
+          debugPrint("Request sent with token: $token");
+          return handler.next(options);
+        },
+        onError: (error, handler) {
+          debugPrint("Dio error: ${error.message}");
+          return handler.next(error);
+        },
+      ),
+    );
+
     dio?.interceptors.add(
       PrettyDioLogger(
         requestBody: true,

@@ -4,7 +4,7 @@ import '../theming/app_colors.dart';
 
 class RoundedTextField extends StatelessWidget {
   final TextEditingController controller;
-  final String hint;
+  final String? hint;
   final bool obscureText;
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
@@ -13,7 +13,7 @@ class RoundedTextField extends StatelessWidget {
   const RoundedTextField({
     super.key,
     required this.controller,
-    required this.hint,
+    this.hint,
     this.obscureText = false,
     this.suffixIcon,
     this.keyboardType,

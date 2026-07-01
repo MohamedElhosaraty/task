@@ -168,7 +168,7 @@ class _OtpViewBodyState extends State<OtpViewBody> {
                   ToastHelper().showSuccessToast(
                     context, "Verified Successfully"
                   );
-                   context.pushReplacementNamed(Routes.mainScreen);
+                   context.pushReplacementNamed(Routes.loginView);
                 }
                 if (state is VerifyError) {
                   ToastHelper().showErrorToast(

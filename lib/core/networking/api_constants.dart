@@ -7,4 +7,5 @@ class ApiConstants {
       'otp?email=$email&otp=$code';
   static const String home = 'home';
   static const String profile = 'profile-details';
+  static const String updateProfile = 'Update-Profile';
 }

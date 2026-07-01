@@ -126,6 +126,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                     ToastHelper().showSuccessToast(context, state.loginModel.message);
                     context.pushReplacementNamed(Routes.mainScreen);
                     SharedPrefHelper.setData(SharedPrefsKeys.username, state.loginModel.data.username);
+                    SharedPrefHelper.setData(SharedPrefsKeys.email, state.loginModel.data.email);
                   }
                   if (state is LoginError) {
                     ToastHelper().showErrorToast(context, state.message);
