@@ -33,5 +33,8 @@ class AppStrings {
   static const String continue1 = 'continue1';
   static const String home = 'home';
   static const String profile = 'profile';
+  static const String hello = 'hello';
+  static const String training = 'training';
+  static const String about = 'about';
 
 }

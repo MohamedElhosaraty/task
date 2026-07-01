@@ -10,6 +10,8 @@ import 'package:task/feature/auth/ui/cubit/auth_cubit.dart';
 import 'package:task/feature/auth/ui/widget/custom_remember.dart';
 import 'package:task/feature/auth/ui/widget/dont_have_an_account.dart';
 
+import '../../../../core/helpers/shared_pref_helper.dart';
+import '../../../../core/helpers/shared_prefs_keys.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/widgets/custom_change_language.dart';
@@ -123,6 +125,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   if (state is LoginSuccess) {
                     ToastHelper().showSuccessToast(context, state.loginModel.message);
                     context.pushReplacementNamed(Routes.mainScreen);
+                    SharedPrefHelper.setData(SharedPrefsKeys.username, state.loginModel.data.username);
                   }
                   if (state is LoginError) {
                     ToastHelper().showErrorToast(context, state.message);

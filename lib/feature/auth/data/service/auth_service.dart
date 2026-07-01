@@ -76,7 +76,7 @@ class AuthService {
     required String code,
   }) async {
     try {
-      final response = await apiManager.get(
+       await apiManager.get(
         endPoint: ApiConstants.verify(email: email, code: code),
       );
       return const Right(null);

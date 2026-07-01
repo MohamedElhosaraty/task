@@ -40,6 +40,7 @@ class AppColors {
 
 
 
+
   static const Color white = Color(0xFFF2F2F2);
   static const Color coffee = Color(0xFFC1A77C);
   static const Color darkBlue = Color(0xFF0E1025);

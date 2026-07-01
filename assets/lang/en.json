@@ -34,5 +34,8 @@
   "resend": "resend",
   "continue1": "continue",
   "home": "home",
-  "profile": "profile"
+  "profile": "profile",
+  "hello": "Hello",
+  "training": "Flutter training for building real mobile apps",
+  "about": "About Training"
 }
