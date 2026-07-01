@@ -7,8 +7,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:task/core/helpers/toast_helper.dart';
 import 'package:task/feature/auth/ui/cubit/auth_cubit.dart';
 import 'package:task/feature/auth/ui/widget/custom_have_account.dart';
-import 'package:task/feature/auth/ui/widget/custom_picture_picker.dart';
-import 'package:task/feature/auth/ui/widget/field_label.dart';
+import 'package:task/core/widgets/custom_picture_picker.dart';
+import 'package:task/core/widgets/field_label.dart';
 
 import '../../../../core/helpers/extensions.dart';
 import '../../../../core/localization/localization_methods.dart';

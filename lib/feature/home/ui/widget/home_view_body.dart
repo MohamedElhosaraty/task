@@ -50,7 +50,7 @@ class HomeViewBody extends StatelessWidget {
                 return Expanded(
                   child: Container(
                     decoration: BoxDecoration(
-                      color: AppColors.white,
+                      color: AppColors.background,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(16.r),
                         topRight: Radius.circular(16.r),

@@ -36,5 +36,8 @@ class AppStrings {
   static const String hello = 'hello';
   static const String training = 'training';
   static const String about = 'about';
+  static const String profile2 = 'profile2';
+  static const String oldPassword = 'oldPassword';
+  static const String saveChange = 'saveChange';
 
 }

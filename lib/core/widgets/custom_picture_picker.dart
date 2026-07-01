@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task/feature/auth/ui/widget/custom_border_painter.dart';
 
-import '../../../../core/localization/localization_methods.dart';
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_text_styles.dart';
-import '../../../../generated/app_string.dart';
+import '../localization/localization_methods.dart';
+import '../theming/app_colors.dart';
+import '../theming/app_text_styles.dart';
+import '../../generated/app_string.dart';
 
 class CustomPicturePicker extends StatelessWidget {
 
@@ -27,6 +27,7 @@ class CustomPicturePicker extends StatelessWidget {
           radius: 14,
         ),
         child: Container(
+          width: double.infinity,
           margin: const EdgeInsets.symmetric(horizontal: 1),
           padding: EdgeInsets.symmetric(vertical: 10.h),
           decoration: BoxDecoration(
@@ -37,6 +38,8 @@ class CustomPicturePicker extends StatelessWidget {
               ? Image.file(
                 image!,
                 fit: BoxFit.cover,
+            height: 90.w,
+            width: double.infinity,
               )
               : Column(
             children: [
@@ -44,7 +47,7 @@ class CustomPicturePicker extends StatelessWidget {
                 width: 44.w,
                 height: 44.w,
                 decoration: const BoxDecoration(
-                  color: Colors.white,
+                  color: AppColors.white,
                   shape: BoxShape.circle,
                 ),
                 child: Icon(

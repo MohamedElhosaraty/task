@@ -37,5 +37,8 @@
   "profile": "profile",
   "hello": "Hello",
   "training": "Flutter training for building real mobile apps",
-  "about": "About Training"
+  "about": "About Training",
+  "profile2": "Profile",
+  "oldPassword": "Old Password",
+  "saveChange": "Save Changes"
 }

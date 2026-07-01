@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:task/feature/profile/ui/widget/profile_view_body.dart';
+
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -6,12 +8,7 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile'),
-      ),
-      body: const Center(
-        child: Text('This is the Profile view'),
-      ),
+      body: ProfileViewBody(),
     );
   }
 }

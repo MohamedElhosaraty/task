@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_text_styles.dart';
+import '../theming/app_colors.dart';
+import '../theming/app_text_styles.dart';
 
 class FieldLabel extends StatelessWidget {
   final String text;

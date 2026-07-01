@@ -49,9 +49,9 @@ class _LoginViewBodyState extends State<LoginViewBody> {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: ListView(
             children: [
-              const SizedBox(height: 40),
+              40.verticalSpace,
               const CustomChangeLanguage(),
-              const SizedBox(height: 100),
+              100.verticalSpace,
               Center(child: Image.asset(Assets.imageLogo)),
               100.verticalSpace,
               Text(

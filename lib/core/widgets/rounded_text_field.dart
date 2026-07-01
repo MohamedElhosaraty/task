@@ -32,7 +32,7 @@ class RoundedTextField extends StatelessWidget {
         hintText: hint,
         hintStyle: const TextStyle(color: AppColors.hint, fontSize: 13),
         filled: true,
-        fillColor: AppColors.fieldFill,
+        fillColor: AppColors.background2,
         suffixIcon: suffixIcon,
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 16,

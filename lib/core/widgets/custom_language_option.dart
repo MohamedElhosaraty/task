@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task/core/theming/app_colors.dart';
-import 'package:task/core/widgets/custom_change_language.dart';
+import 'package:task/core/widgets/language_bottom_sheet.dart';
 
 class CustomLanguageOption extends StatelessWidget {
   final String label;

@@ -6,4 +6,5 @@ class ApiConstants {
   static String verify({required String email, required String code}) =>
       'otp?email=$email&otp=$code';
   static const String home = 'home';
+  static const String profile = 'profile-details';
 }

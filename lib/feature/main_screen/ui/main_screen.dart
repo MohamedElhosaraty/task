@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:task/feature/profile/ui/cubit/profile_cubit.dart';
 import '../../../core/di/dependency_injection.dart';
 import '../../../core/theming/app_colors.dart';
 import '../../../core/widgets/bottom_nav_bar.dart';
@@ -26,8 +27,17 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => getIt<HomeCubit>()..getHome(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) =>
+          getIt<HomeCubit>()
+            ..getHome(),
+        ),
+        BlocProvider(
+          create: (context) => getIt<ProfileCubit>()..getDetails(),
+        ),
+      ],
       child: Scaffold(
         backgroundColor: AppColors.white,
         body: _pages[index],
